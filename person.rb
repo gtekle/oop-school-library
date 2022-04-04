@@ -33,9 +33,3 @@ class Person < Nameable
     name
   end
 end
-
-person1 = Person.new(23, 'Tekle')
-person2 = Person.new(16, 'David', false)
-
-puts "person1: #{person1.can_use_services?}"
-puts "person2: #{person2.can_use_services?}"
