@@ -1,8 +1,8 @@
-require_relative './names_decorator'
+require_relative './name_decorator'
 
 # TrimmerDecorator class
-class TrimmerDecorator < CorrectNamesDecorator
+class TrimmerDecorator < NameDecorator
   def correct_name
-    nameable.correct_name[0, 10]
+    @nameable.correct_name[0, 10]
   end
 end

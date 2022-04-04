@@ -1,8 +1,8 @@
-require_relative './names_decorator'
+require_relative './name_decorator'
 
 # class CapitalizeName decorator
-class CapitalizeName < CorrectNamesDecorator
+class CapitalizeName < NameDecorator
   def correct_name
-    nameable.correct_name.capitalize
+    @nameable.correct_name.capitalize
   end
 end
