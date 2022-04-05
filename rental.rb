@@ -1,7 +1,7 @@
 class Rental
   attr_accessor :date
 
-  def initialize(date, book, person)
+  def initialize(book, person, date = Time.now)
     @date = date
 
     @book = book
@@ -9,5 +9,9 @@ class Rental
 
     @person = person
     person.rentals.push(self)
+  end
+
+  def show_rental
+    "#{@person.name} #{@book.title}  #{date}"
   end
 end
