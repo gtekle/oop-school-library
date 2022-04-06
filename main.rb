@@ -52,7 +52,7 @@ def register_new_rental(app)
   app.books.each_with_index { |book, index| puts "(#{index}) Title: \"#{book.title}\", Author: #{book.author}" }
   selected_book_number = gets.chomp.to_i
   puts 'Select a person from the following list by its number'
-  app.people.each_with_index do |person, index| 
+  app.people.each_with_index do |person, index|
     puts " (#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
   end
   selected_person_number = gets.chomp.to_i
