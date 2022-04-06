@@ -14,4 +14,14 @@ class App
     @people = []
     @rentals = []
   end
+
+  def register_person(role, name, age, specialization = '', parent_permission = '')
+    is_permitted = parent_permission.downcase == 'y'
+    person = if role == 1
+               Student.new('104', age, name, parent_permission: is_permitted)
+             else
+               Teacher.new(specialization, age, name)
+             end
+    @people << person
+  end
 end
