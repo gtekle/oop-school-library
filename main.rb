@@ -68,7 +68,10 @@ def main
       date = gets.chomp
       app.create_rental(book, person, date)
     when 6
+      print 'ID of person: '
+      person_id = gets.chomp.to_i
       puts 'Rentals:'
+      app.list_rentals_by_person(person_id)
     else
       puts 'Please select a valid number from the list!'
     end
