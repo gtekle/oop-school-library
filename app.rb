@@ -16,6 +16,7 @@ class App
   end
 
   def register_person(role, name, age, specialization = '', parent_permission = '')
+    puts 'method called'
     is_permitted = parent_permission.downcase == 'y'
     person = if role == 1
                Student.new('104', age, name, parent_permission: is_permitted)
