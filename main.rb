@@ -4,26 +4,32 @@ require_relative './rental'
 require_relative './student'
 require_relative './capitalize_name_decorator'
 require_relative './trim_name_decorator'
+require_relative './app'
 
-person = Person.new(22, 'maximilianus')
-puts person.correct_name
-capitalized_person = CapitalizeName.new(person)
-capitalized_person.correct_name
-capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-capitalized_trimmed_person.correct_name
+def main
+  options = [
+    'list all books',
+    'list all people',
+    'create a person',
+    'create a book',
+    'create a rental',
+    'list all rentals for a give person id',
+    'exit'
+  ]
 
-puts capitalized_trimmed_person.correct_name
+  puts 'Welcome to School Library App!'
 
-student1 = Person.new(15, 'Bob')
-student2 = Person.new(17, 'Mary')
+  loop do
+    puts
+    puts 'Please choose an option by entering a number: '
+    options.each_with_index do |option, index|
+      puts "#{index + 1} - #{option.capitalize}"
+    end
 
-book1 = Book.new('Book1 Title', 'Book1 Author')
-book2 = Book.new('Book2 Title', 'Book2 Author')
-book3 = Book.new('Book3 Title', 'Book3 Author')
+    selected_option = gets.chomp.to_i
 
-rental1 = Rental.new(book1, student1)
-rental2 = Rental.new(book2, student1)
-rental3 = Rental.new(book3, student2)
+    break if selected_option == 7
+  end
+end
 
-puts "Total books rented by #{student1.name} = #{student1.rentals.length}"
-puts rental1.show_rental, rental2.show_rental, rental3.show_rental
+main
