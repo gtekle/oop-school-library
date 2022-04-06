@@ -24,4 +24,8 @@ class App
              end
     @people << person
   end
+
+  def create_book(title, author)
+    @books << Book.new(title, author)
+  end
 end

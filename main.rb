@@ -50,6 +50,11 @@ def main
       puts 'Person successfully registered!'
     when 4
       print 'Title: '
+      title = gets.chomp
+      print 'Author: '
+      author = gets.chomp
+      app.create_book(title, author)
+      puts 'Book successfully created!'
     when 5
       puts 'Select a book from the following list by its number'
     when 6
