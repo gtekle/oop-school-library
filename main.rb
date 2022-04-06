@@ -29,7 +29,7 @@ def main
 
     case selected_option
     when 1
-      puts 'show all books'
+      app.show_books
     when 2
       app.show_people
     when 3

@@ -32,4 +32,8 @@ class App
   def show_people
     @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
   end
+
+  def show_books
+    @books.each { |book| puts "[#{book.class}] Title: \"#{book.title}\", Author: #{book.author}" }
+  end
 end
