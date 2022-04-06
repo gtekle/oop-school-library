@@ -36,4 +36,8 @@ class App
   def show_books
     @books.each { |book| puts "[#{book.class}] Title: \"#{book.title}\", Author: #{book.author}" }
   end
+
+  def create_rental(book, person, date)
+    @rentals.push(Rental.new(book, person, date))
+  end
 end

@@ -57,6 +57,16 @@ def main
       puts 'Book successfully created!'
     when 5
       puts 'Select a book from the following list by its number'
+      app.show_books
+      selected_book_number = gets.chomp.to_i
+      puts 'Select a person from the following list by its number'
+      app.show_people
+      selected_person_number = gets.chomp.to_i
+      print 'Date: '
+      book = app.books[selected_book_number]
+      person = app.people[selected_person_number]
+      date = gets.chomp
+      app.create_rental(book, person, date)
     when 6
       puts 'Rentals:'
     else
