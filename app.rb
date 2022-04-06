@@ -28,4 +28,8 @@ class App
   def create_book(title, author)
     @books << Book.new(title, author)
   end
+
+  def show_people
+    @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+  end
 end

@@ -31,7 +31,7 @@ def main
     when 1
       puts 'show all books'
     when 2
-      puts 'show all people'
+      app.show_people
     when 3
       puts 'Do you want to register a student (1) or a teacher (2)? [1 - student, 2 - teacher]'
       role = gets.chomp.to_i
