@@ -22,11 +22,11 @@ end
 
 def add_person(app)
   puts 'Do you want to register a student (1) or a teacher (2)? [1 - student, 2 - teacher]'
-  role = gets.chomp.to_i
+  role = gets.chomp
   print 'Name: '
   name = gets.chomp
   print 'Age: '
-  age = gets.chomp
+  age = gets.chomp.to_i
   if role == 1
     print 'Has parent permission? [Y|N]: '
     parent_permission = gets.chomp
